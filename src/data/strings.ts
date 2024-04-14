@@ -9,4 +9,7 @@ export const Strings = {
 
   noUnusedDayWordsLeft:
     'There is no unused daywords left in database! Add a new group of daywords as soon as possible!',
+
+  sentenceOptionsValidation:
+    'Options must only contain keys a, b, and c with string values',
 };
