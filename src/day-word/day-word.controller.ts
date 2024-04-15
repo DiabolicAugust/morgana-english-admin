@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  Patch,
   Post,
   UsePipes,
   ValidationPipe,
@@ -27,5 +28,10 @@ export class DayWordController {
   @Get()
   async getRandom() {
     return this.dayWordService.getOneRandom();
+  }
+
+  @Patch()
+  async resetUsed() {
+    return this.dayWordService.resetUsed();
   }
 }
