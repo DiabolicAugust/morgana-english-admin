@@ -37,6 +37,8 @@ export class FactService {
         Strings.noUnusedModelLeft(Models.Fact),
         HttpStatus.NOT_IMPLEMENTED,
       );
+    await fact.updateOne({ used: true });
+
     return fact;
   }
 
