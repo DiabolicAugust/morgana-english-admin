@@ -47,11 +47,15 @@ export class SentenceService {
     const sentence = await this.sentenceModel.findOne({ used: false });
     if (!sentence)
       throw new HttpException(
-        Strings.noUnusedDayWordsLeft,
+        Strings.noUnusedModelLeft(Models.Sentence),
         HttpStatus.NOT_FOUND,
       );
 
     await sentence.updateOne({ used: true });
     return sentence;
+  }
+
+  async resetUsed() {
+    await this.sentenceModel.updateMany({}, { used: false });
   }
 }

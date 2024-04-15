@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { DayWordModule } from './day-word/day-word.module';
 import { SentenceModule } from './sentence/sentence.module';
+import { FactModule } from './fact/fact.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { SentenceModule } from './sentence/sentence.module';
     MongooseModule.forRoot(process.env.DATABSE_URL),
     DayWordModule,
     SentenceModule,
+    FactModule,
   ],
   controllers: [AppController],
   providers: [AppService],
