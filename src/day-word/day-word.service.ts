@@ -49,11 +49,15 @@ export class DayWordService {
     const dayWord = await this.dayWordModel.findOne({ used: false });
     if (!dayWord)
       throw new HttpException(
-        Strings.noUnusedDayWordsLeft,
+        Strings.noUnusedModelLeft(Models.DayWord),
         HttpStatus.NOT_FOUND,
       );
 
     await dayWord.updateOne({ used: true });
     return dayWord;
+  }
+
+  async resetUsed() {
+    await this.dayWordModel.updateMany({}, { used: false });
   }
 }

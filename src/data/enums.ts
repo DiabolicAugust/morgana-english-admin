@@ -13,4 +13,5 @@ export enum Fields {
 export enum Models {
   DayWord = 'Day Word',
   Sentence = 'Sentence',
+  Fact = 'Fact',
 }

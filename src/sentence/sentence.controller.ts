@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  Patch,
   Post,
   UsePipes,
   ValidationPipe,
@@ -29,5 +30,10 @@ export class SentenceController {
   @Get('')
   async getOneRandom() {
     return this.sentenceService.getOneRandom();
+  }
+
+  @Patch()
+  async resetUsed() {
+    return this.sentenceService.resetUsed();
   }
 }
