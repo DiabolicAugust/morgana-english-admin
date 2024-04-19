@@ -8,10 +8,14 @@ export enum Fields {
   answer = 'answer',
   options = 'options',
   explanation = 'explanation',
+  topic = 'topic',
+  topicTranslation = 'topicTranslation',
+  sentenceTranslation = 'sentenceTranslation',
 }
 
 export enum Models {
   DayWord = 'Day Word',
   Sentence = 'Sentence',
   Fact = 'Fact',
+  TopicSet = 'Topic Set',
 }
