@@ -7,6 +7,7 @@ import { DayWordModule } from './day-word/day-word.module';
 import { SentenceModule } from './sentence/sentence.module';
 import { FactModule } from './fact/fact.module';
 import { TopicSetModule } from './topic-set/topic-set.module';
+import { StatisticsModule } from './statistics/statistics.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { TopicSetModule } from './topic-set/topic-set.module';
     SentenceModule,
     FactModule,
     TopicSetModule,
+    StatisticsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
