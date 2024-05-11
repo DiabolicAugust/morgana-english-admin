@@ -10,6 +10,9 @@ export const Strings = {
   noUnusedModelLeft: (model: Models) =>
     `There is no unused ${model} left in database! Add a new group of ${model} as soon as possible!`,
 
+  fewUnusedModelLeft: (model: Models) =>
+    `There are 7 or less ${model} left in database! Add a new group of ${model} as soon as possible!`,
+
   sentenceOptionsValidation:
     'Options must only contain keys a, b, and c with string values',
 };
